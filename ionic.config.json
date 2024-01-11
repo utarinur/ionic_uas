@@ -1,0 +1,7 @@
+{
+  "name": "uut_uas",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

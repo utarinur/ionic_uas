@@ -1,0 +1,26 @@
+/* Add this CSS to your component's style file or global styles */
+
+ion-content {
+  --ion-background-color: #ffffff; /* Set the background color */
+}
+
+ion-card {
+  max-width: 400px;
+  margin: auto;
+  margin-top: 50%;
+  background-color: gray; /* Set thgre card background to transparent */
+  box-shadow: none;
+}
+
+ion-card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+ion-item {
+  margin-bottom: 15px;
+}
+
+ion-button {
+  margin-top: 10px;
+}

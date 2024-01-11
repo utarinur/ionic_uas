@@ -1,0 +1,82 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Pendaftaran Calon Mahasiswa
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Reg ID</th>
+          <th>password</th>
+          <th>Nama</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of allData">
+          <td>{{ data.no }}</td>
+          <td>{{ data.reg_id }}</td>
+          <td>{{ data.password }}</td>
+          <td>{{ data.nama_lengkap }}</td>
+          <td>
+            <span *ngIf="data.status === '1' ">ok</span>
+            <span *ngIf="data.status === '0' ">Menunggu</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+  </body>
+
+
+
+
+  <body>
+    <div class="topnav">
+      <a class="active" href="#Pengecekan Free Akun">Pengecekan Free Akun</a>
+      <a href="#Data Calon Mahasiswa Mendaftar">Data Calon Mahasiswa Mendaftar</a>
+      <div class="search-container">
+        <form action="/action_page.php">
+          <input type="text" placeholder="Search.." name="search2">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    </div>
+    
+    <table>
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Reg ID</th>
+          <th>password</th>
+          <th>Nama</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of allData">
+          <td>{{ data.no }}</td>
+          <td>{{ data.reg_id }}</td>
+          <td>{{ data.password }}</td>
+          <td>{{ data.nama_lengkap }}</td>
+          <td>
+            <span *ngIf="data.status === '1' " style="color: red;">ok</span>
+            <span *ngIf="data.status === '0' " style="color: green;">Menunggu</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+    </body>
+
+</ion-content>
